@@ -5,7 +5,7 @@
     background-color: #eeeeee;
 }
 
-.ms_input_search_chat{
+.ms_input_search_chat, .ms_input_microphone{
     border: none;
     width: 100%;
 }
@@ -18,4 +18,10 @@
     background-image: url(img/sfondo-whatsapp.jpg);
     background-position: center;
     background-size: auto;
+}
+
+.ms_col_new_message{
+    background-color: #f2f2f2;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
