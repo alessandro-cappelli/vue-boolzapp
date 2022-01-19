@@ -11,9 +11,11 @@
 }
 
 .ms_row_chat{
-    height: 90vh;
+    height: 80vh;
 }
 
 .ms_col_open_chat{
-    background-image: ;
+    background-image: url(img/sfondo-whatsapp.jpg);
+    background-position: center;
+    background-size: auto;
 }
