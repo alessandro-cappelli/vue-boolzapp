@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+}
+.ms_container_header{
+    background-color: #eeeeee;
+}
+
+.ms_input_search_chat{
+    border: none;
+    width: 100%;
+}
+
+.ms_row_chat{
+    height: 90vh;
+}
+
+.ms_col_open_chat{
+    background-image: ;
+}
