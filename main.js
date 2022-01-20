@@ -1,7 +1,7 @@
 let myapp = new Vue({
     el:"#app",
     data: {
-        contattoAttivo: null,
+        contattoAttivo: 0,
         user: {
             name: 'Alessandro',
             avatar: '_io'
