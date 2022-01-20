@@ -7,11 +7,23 @@
     border-right: 2px solid grey;
 }
 
+/* cerca contatti */
 .ms_input_search_chat, .ms_input_microphone{
     border: none;
     width: 100%;
 }
 
+/* contatti */
+.ms_contact{
+    background-color: white;
+    cursor: pointer;
+}
+
+.ms_contact:hover{
+    background-color: gray;
+}
+
+/* chat */
 .ms_row_chat{
     height: 70vh;
 }

@@ -19,7 +19,7 @@
                     <div class="col-4 align-items-center d-flex ms_colums_user">
                         <div class="col d-flex align-items-center">
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
-                            <span>Mario Rossi</span>
+                            <span>{{user.name}}</span>
                         </div>
                         <div class="col text-end">
                             <span class="mx-4"><i class="fas fa-comment-alt"></i></span>
@@ -49,35 +49,24 @@
                             <input class="ms_input_search_chat" type="text" placeholder="Search or start new chat">
                         </div>
 
-                        <div class="col" v-for="(item, index) in contacts">
+                        <div class="col ms_contact" v-for="(item, index) in contacts" @click="contattoAttivo = index">
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
                             <span>{{item.name}}</span>
                         </div>
-                        <!-- <div class="col">
-                            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
-                            <span>Fabio</span>
-                        </div>
-                        <div class="col">
-                            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
-                            <span>Samuele</span>
-                        </div>
-                        <div class="col">
-                            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
-                            <span>Luisa</span>
-                        </div> -->
                     </div>
 
                     <!-- chat aperta -->
                     <div class="col ms_col_open_chat">
-
-                        <div class="col">
-                            <div class="d-flex">
-                                <span class="ms_message_scritti">Hai portato a spasso il cane?</span>
+                        <div v-if="contattoAttivo != null">
+                            <div class="col message" v-for="(messaggio, index) in contacts[0].messages" :class="messaggio.status">
+                                <div class="d-flex">
+                                    <span class="ms_message_scritti">{{messaggio.message}}</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- messaggi scritti dall utente -->
-                        <div class="col">
+                        <!-- messaggi scritti dall user -->
+                        <div class="col message">
                             <div class="d-flex justify-content-end">
                                 <span class="ms_message_user">si</span>
                             </div>

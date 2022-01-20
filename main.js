@@ -1,6 +1,11 @@
 let myapp = new Vue({
     el:"#app",
     data: {
+        contattoAttivo: null,
+        user: {
+            name: 'Alessandro',
+            avatar: '_io'
+        },
         contacts:[
             {
                 name: 'Michele',
