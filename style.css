@@ -1,8 +1,10 @@
-*{
-    padding: 0;
-}
 .ms_container_header{
     background-color: #eeeeee;
+    margin-top: 50px;
+}
+
+.ms_colums_user{
+    border-right: 2px solid grey;
 }
 
 .ms_input_search_chat, .ms_input_microphone{
@@ -11,7 +13,7 @@
 }
 
 .ms_row_chat{
-    height: 80vh;
+    height: 70vh;
 }
 
 .ms_col_open_chat{
@@ -24,4 +26,25 @@
     background-color: #f2f2f2;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+/* messaggi scritti da altri */
+.ms_message_scritti{
+    background-color: #ffffff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 5px
+}
+
+/* messaggi scritti da noi */
+.ms_message_user{
+    background-color: #dcf9c6;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 5px
+
 }
