@@ -49,11 +49,11 @@
                             <input class="ms_input_search_chat" type="text" placeholder="Search or start new chat">
                         </div>
 
-                        <div class="col">
+                        <div class="col" v-for="(item, index) in contacts">
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
-                            <span>Michele</span>
+                            <span>{{item.name}}</span>
                         </div>
-                        <div class="col">
+                        <!-- <div class="col">
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
                             <span>Fabio</span>
                         </div>
@@ -64,7 +64,7 @@
                         <div class="col">
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
                             <span>Luisa</span>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- chat aperta -->
