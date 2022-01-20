@@ -28,6 +28,10 @@
     padding-top: 10px;
 }
 
+.ms_row_new_message{
+    height: 50px;
+}
+
 /* messaggi scritti da altri */
 .ms_message_scritti{
     background-color: #ffffff;
