@@ -19,9 +19,7 @@ img{
     width: 100%;
 }
 
-.ms_input_search_chat{
-    /* background-color: #f9f9f9; */
-}
+
 
 /* contatti */
 .ms_contact{
@@ -56,22 +54,21 @@ img{
 }
 
 /* messaggi scritti da altri */
-.ms_message_scritti{
+.received{
     background-color: #ffffff;
-    display: inline-block;
+    /* display: inline; */
     margin-top: 20px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 15px;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 /* messaggi scritti da noi */
-.ms_message_user{
+.sent{
     background-color: #dcf9c6;
-    display: inline-block;
+    /* display: inline; */
     margin-top: 20px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 15px;
-    margin-left: 5px
-
+    margin-left: 5px;
 }

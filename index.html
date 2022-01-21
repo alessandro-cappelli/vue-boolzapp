@@ -63,18 +63,12 @@
 
                     <!-- chat aperta -->
                     <div class="col ms_col_open_chat">
-                        <div v-if="contattoAttivo != null">
-                            <div class="col message" v-for="(messaggio, index) in contacts[0].messages" :class="messaggio.status">
+                        <div>
+                            <div v-if="contattoAttivo !=null"></div>
+                            <div class="col message" v-for="(messaggio, index) in contacts[contattoAttivo].messages" >
                                 <div class="d-flex">
-                                    <span class="ms_message_scritti">{{messaggio.message}}</span>
+                                    <span class="ms_message_scritti" :class="messaggio.status">{{messaggio.text}}</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- messaggi scritti dall user -->
-                        <div class="col message">
-                            <div class="d-flex justify-content-end">
-                                <span class="ms_message_user">si</span>
                             </div>
                         </div>
                     </div> 
