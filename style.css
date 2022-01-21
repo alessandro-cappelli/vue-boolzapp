@@ -1,10 +1,16 @@
 .ms_container_header{
-    background-color: #eeeeee;
+    background-color: #efefef;
     margin-top: 50px;
 }
 
 .ms_colums_user{
     border-right: 2px solid grey;
+}
+
+/* immagine */
+img{
+    background-color: white;
+    border-radius: 100%;
 }
 
 /* cerca contatti */
@@ -13,10 +19,15 @@
     width: 100%;
 }
 
+.ms_input_search_chat{
+    /* background-color: #f9f9f9; */
+}
+
 /* contatti */
 .ms_contact{
     background-color: white;
     cursor: pointer;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .ms_contact:hover{
