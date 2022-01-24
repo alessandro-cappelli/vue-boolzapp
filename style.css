@@ -73,6 +73,13 @@ img{
     margin-left: 5px;
 }
 
+/* messaggi destra */
+#sent{
+    justify-content: end;
+}
+
+/* ricerca contatti */
 .nascondi{
     display: none !important;
 }
+

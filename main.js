@@ -119,9 +119,10 @@ let myapp = new Vue({
                 text: "ok",
                 status: 'received'
             };
-            this.contacts[this.contattoAttivo].messages.push(newMessage)
-            
+            this.contacts[this.contattoAttivo].messages.push(newMessage)           
         },
+
+        // funzione ricerca contatti
         filtroContatti: function(){
             this.contacts.forEach((elemento) =>{
                 elemento.visible = elemento.name.toLowerCase().includes(this.filtroNome.toLowerCase())
