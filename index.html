@@ -62,7 +62,7 @@
                         <div class="col ms_contact" 
                         v-for="(item, index) in contacts" 
                         @click="contattoAttivo = index"
-                        > <!--:class="{nascondi: !contatto.visible}-->
+                        :class="{nascondi: !item.visible}"> 
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
                             <span>{{item.name}}</span>
                         </div>
@@ -91,11 +91,15 @@
                         <!-- vuoto -->
                     </div>
 
+                    
                     <div class="col d-flex ms_col_new_message">
                         <span class="mx-4"><i class="far fa-smile"></i></span>
+
+                        <!-- input per scrivere messaggi -->
                         <input class="ms_input_microphone" type="text" placeholder="Scrivi nuovo messaggio"
                         v-model="valoreInput"
                         @keyup.enter="aggiungiMessaggio">
+
                         <span class="mx-4"><i class="fas fa-microphone"></i></span>
                     </div>
                 </div>
