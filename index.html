@@ -52,10 +52,16 @@
                     <div class="col-4">
                         <div class="col d-flex my-2">
                             <span class="mx-4"><i class="fas fa-search"></i></span>
-                            <input class="ms_input_search_chat" type="text" placeholder="Search or start new chat">
+                            <input class="ms_input_search_chat" type="text" placeholder="Search or start new chat"
+                            name="search"
+                            v-model="filtroNome"
+                            @keyup="filtroContatti">
                         </div>
 
-                        <div class="col ms_contact" v-for="(item, index) in contacts" @click="contattoAttivo = index">
+                        <div class="col ms_contact" 
+                        v-for="(item, index) in contacts" 
+                        @click="contattoAttivo = index"
+                        > <!--:class="{nascondi: !contatto.visible}-->
                             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47940/bust-in-silhouette-emoji-clipart-md.png" height="50px">
                             <span>{{item.name}}</span>
                         </div>
@@ -86,7 +92,9 @@
 
                     <div class="col d-flex ms_col_new_message">
                         <span class="mx-4"><i class="far fa-smile"></i></span>
-                        <input class="ms_input_microphone" type="text" placeholder="Scrivi nuovo messaggio">
+                        <input class="ms_input_microphone" type="text" placeholder="Scrivi nuovo messaggio"
+                        v-model="valoreInput"
+                        @keyup.enter="aggiungiMessaggio">
                         <span class="mx-4"><i class="fas fa-microphone"></i></span>
                     </div>
                 </div>
@@ -95,7 +103,7 @@
         </footer>
     </div>
 
-
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>

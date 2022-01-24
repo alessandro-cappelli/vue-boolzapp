@@ -72,3 +72,7 @@ img{
     border-radius: 15px;
     margin-left: 5px;
 }
+
+.nascondi{
+    display: none !important;
+}

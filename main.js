@@ -1,7 +1,9 @@
 let myapp = new Vue({
     el:"#app",
     data: {
+        filtroNome: "",
         contattoAttivo: 0,
+        valoreInput: "",
         user: {
             name: 'Alessandro',
             avatar: '_io'
@@ -93,6 +95,37 @@ let myapp = new Vue({
         ],
     },
     methods:{
+        // funzione per aggiungere un nuovo messaggio 
+        aggiungiMessaggio: function(){
+            const newMessage = {
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                text: this.valoreInput,
+                status: 'sent'
+            };
+            this.valoreInput = "";
+            this.contacts[this.contattoAttivo].messages.push(newMessage)
 
+            // settare tempo per risposta
+            const indiceContatto = this.contattoAttivo
+            setTimeout(() =>{
+                this.aggiungiRisposta(indiceContatto)
+            },3000)           
+        },
+
+        // funzione per aggiungere risposta 
+        aggiungiRisposta: function(){
+            const newMessage = {
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                text: "ok",
+                status: 'received'
+            };
+            this.contacts[this.contattoAttivo].messages.push(newMessage)
+            
+        },
+        filtroContatti: function(){
+            this.contacts.forEach((elemento) =>{
+                elemento.visible = elemento.name.toLowerCase().includes(this.filtroNome.toLowerCase())
+            });
+        }
     }
 });
